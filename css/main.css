@@ -1,95 +1,160 @@
 html {
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", sans-serif;
 }
 
-body {
-  color: #990073;
-  background-image: repeating-linear-gradient(-35deg, #d4fdff, #c9fcff, #c9fcff 15px, #b3fbff 10px, #b3fbff 10px)
+.content {
+  border-top: 8px solid #b3fbff;
+  border-bottom: 8px solid #b3fbff;
+  max-height: 500px;
+  background-image: repeating-linear-gradient(-35deg, #d4fdff, #c9fcff, #c9fcff 15px, #b3fbff 10px, #b3fbff 10px);
 }
 
 text {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, .3);
+  animation: blur 1s linear 1;
+  transition: all 3s linear 5s;
+}
+
+@keyframes blur {
+
+  0% {
+    filter: blur(0);
+    filter: opacity(0);
+  }
+
+  50% {
+    filter: blur(10px);
+    filter: opacity(25%);
+  }
+
+  100% {
+    filter: blur(0);
+    filter: opacity(100%);
+  }
+
 }
 
 h1 {
-  transform: rotate(-15deg);
+  transform: rotate(-9deg);
   transform-origin: left center;
-  max-width: 19em;
-  padding-top: 3em;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
+  left: 45px;
+  top: 88px;
+  color: #990073;
 
 }
 
 p {
-  transform: rotate(-10deg);
+  transform: rotate(-5deg);
   transform-origin: left center;
   color: #c09;
   max-width: 19em;
-  padding-left: 1em;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
-
+  top: 185px;
+  left: 57px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
 
-.btn {
+.btn-ghost {
   color: #c09;
-  border-color: #c09;
-  margin-left: 2em;
-
+  top: 322px;
+  left: 57px;
+  border: 3px solid #990073;
+  border-radius: 5px;
 }
 
-.btn:hover {
-  background-color: #c09 90%;
-}
-
-.icecream {
-  height: 100px;
-  position: relative;
+.btn-ghost:hover {
+  color: #c09;
+  background-color: #b3fbff;
+  border: 3px solid #990073;
 }
 
 .mint-chip {
-  position: absolute;
-  bottom: calc(60% - 23.5em);
-
-  animation: drop 1s linear;
+  top: 225px;
+  left: 728px;
+  max-width: 140px;
+  z-index: 1;
+  animation: drop 1s linear 1 forwards;
 
 }
 
 .cone {
-  position: absolute;
-  bottom: calc(45% - 30em);
-
-  animation: drop 1s linear;
+  top: 315px;
+  left: 735px;
+  max-width: 127px;
+  z-index: 5;
+  animation: drop 1s linear 1 forwards;
 
 }
 
 .chocolate-chip {
-  position: absolute;
-  bottom: calc(30% - 16.5em);
-  right: calc(50% - 1.5em);
+  top: 140px;
+  left: 735px;
+  max-width: 140px;
+  z-index: 2;
 
-  animation: drop 1s linear;
+  animation: drop 1s linear 1 forwards;
+
 }
 
 .vanilla-fudge {
-  position: absolute;
-  bottom: calc(20% - 11em);
+  top: 70px;
+  left: 725px;
+  max-width: 140px;
+  z-index: 3;
 
-  animation: drop 1s linear;
+  animation: drop 1s linear 1 forwards;
 }
 
 .cherry {
-  position: absolute;
-  bottom: calc(60% - 8em);
+  top: 28px;
+  left: 740px;
+  max-width: 100px;
+  z-index: 4;
+  animation: drop 1s linear 1 forwards;
 
-  animation: drop 1s linear;
 }
 
 @keyframes drop {
 
-  from {
-    transform: translateY(-100em);
+  0% {
+    transform: translateY(-100px);
   }
 
-  to {
+  100% {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 90em) {
+
+  h1 {
+    left: 215px;
+  }
+
+  p {
+    left: 215px;
+  }
+
+  .btn {
+    left: 215px;
+  }
+
+  .cherry {
+    left: 280px;
+  }
+
+  .vanilla-fudge {
+    left: 945px;
+  }
+
+  .chocolate-chip {
+    left: 945px;
+  }
+
+  .mint-chip {
+    left: 948px;
+  }
+
+  .cone {
+    left: 945px;
   }
 }
